@@ -20,7 +20,7 @@ const sayYouLose = (answer, correct) => {
   console.log(`Let's try again, ${userName}!`);
 };
 
-const getRound = () => {
+const startGame = () => {
   const iterRound = (limit) => {
     const number = Math.floor(Math.random() * 100);
     askQuestion(number);
@@ -56,5 +56,5 @@ export default () => {
   sayHello(userName);
   insertDelimiter();
 
-  getRound();
+  startGame();
 };
