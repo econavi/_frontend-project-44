@@ -1,60 +1,44 @@
 import readlineSync from 'readline-sync';
 
 const roundsLimit = 3;
-let userName = '';
-let userIsWinner = 'false';
-
-const showWelcome = () => console.log('Welcome to the Brain Games!');
-const showRules = () => console.log('Answer "yes" if number even otherwise answer "no".');
-const sayYouIsWinner = () => console.log(`Congratulations, ${userName}!`);
-const sayHello = name => console.log(`Hello, ${name}!`);
+const isEven = num => num % 2 === 0;
 const insertDelimiter = () => console.log('\n');
-const askQuestion = data => console.log(`Question: ${data}`);
-const getAnswer = () => readlineSync.question('Your answer: ').toLowerCase();
-const sayCorrect = () => console.log('Correct!');
-const askName = () => {
-  userName = readlineSync.question('May I have your name? ');
-};
-const sayYouLose = (answer, correct) => {
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`);
-  console.log(`Let's try again, ${userName}!`);
-};
 
-const startGame = () => {
+const startGame = (userName) => {
+  let userIsWinner = 'false';
+
   const iterRound = (limit) => {
-    const number = Math.floor(Math.random() * 100);
-    askQuestion(number);
+    if (limit < 1) return;
 
-    const answer = getAnswer();
-    if (number % 2 === 0 && answer !== 'yes') {
+    const question = Math.floor(Math.random() * 100);
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ').toLowerCase();
+    const correctAnswer = isEven(question) ? 'yes' : 'no';
+
+    if (answer !== correctAnswer) {
       userIsWinner = false;
-      sayYouLose(answer, 'yes');
-      return;
-    }
-    if (number % 2 !== 0 && answer !== 'no') {
-      userIsWinner = false;
-      sayYouLose(answer, 'no');
-      return;
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
     }
 
-    sayCorrect();
+    console.log('Correct!');
     userIsWinner = true;
-    if (limit > 1) iterRound(limit - 1);
+    iterRound(limit - 1);
   };
 
   iterRound(roundsLimit);
-  if (userIsWinner) sayYouIsWinner();
+  if (userIsWinner) console.log(`Congratulations, ${userName}!`);
 };
 
 export default () => {
   insertDelimiter();
-  showWelcome();
-  showRules();
+  console.log('Welcome to the Brain Games!');
+  console.log('Answer "yes" if number even otherwise answer "no".');
   insertDelimiter();
 
-  askName();
-  sayHello(userName);
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
   insertDelimiter();
 
-  startGame();
+  startGame(userName);
 };
