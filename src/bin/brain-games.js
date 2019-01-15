@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import * as app from '..';
+import { sayHello } from '..';
 
-app.sayHello();
+sayHello();
