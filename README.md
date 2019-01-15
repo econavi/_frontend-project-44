@@ -5,4 +5,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/90d5a78fc1aae0987db2/test_coverage)](https://codeclimate.com/github/econavi/project-lvl1-s412/test_coverage)
 
 # Brain-games
-Мой первый JS проект в Хекслет.
+My first JS-project on Hexlet.
+
+#### How to install and run The Even Game
+[![asciicast](https://asciinema.org/a/fSVANOCq9DKtYN7Rel5CC5bhD.svg)](https://asciinema.org/a/fSVANOCq9DKtYN7Rel5CC5bhD)
