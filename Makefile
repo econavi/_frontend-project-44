@@ -7,7 +7,7 @@ start:
 publish:
 	npm publish
 
-build:
+build: lint
 	rm -rf dist
 	npm run build
 
