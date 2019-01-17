@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import evenGame from './games/even';
 import calcGame from './games/calc';
+import gcdGame from './games/gcd';
 
 export const roundsLimit = 3;
 export const isEven = num => num % 2 === 0;
@@ -17,12 +18,14 @@ export const sayHello = () => {
 const showRuls = (gameName) => {
   if (gameName === 'even') console.log('Answer "yes" if number even otherwise answer "no".');
   if (gameName === 'calc') console.log('What is the result of the expression?');
+  if (gameName === 'gcd') console.log('Find the greatest common divisor of given numbers.');
   return false;
 };
 
 const startGame = (gameName) => {
   if (gameName === 'even') return evenGame();
   if (gameName === 'calc') return calcGame();
+  if (gameName === 'gcd') return gcdGame();
   return false;
 };
 

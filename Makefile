@@ -22,3 +22,6 @@ calc:
 
 even:
 	dist/bin/brain-even.js
+
+gcd:
+	dist/bin/brain-gcd.js

@@ -12,3 +12,6 @@ My first JS-project on Hexlet.
 
 #### How to install and run The Calc Game
 [![asciicast](https://asciinema.org/a/LAtmdjKCyByNmuc7RNdbOvbwz.svg)](https://asciinema.org/a/LAtmdjKCyByNmuc7RNdbOvbwz)
+
+#### How to install and run The GCD Game
+[![asciicast](https://asciinema.org/a/HXCMZcMypCMc5iVXb4xK8eFci.svg)](https://asciinema.org/a/HXCMZcMypCMc5iVXb4xK8eFci)
