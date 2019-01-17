@@ -5,7 +5,7 @@ const isEven = num => num % 2 === 0;
 
 const startGame = () => {
   const iterRound = (limit) => {
-    if (limit < 1) return;
+    if (limit < 1) return true;
 
     const question = Math.floor(Math.random() * 100);
     console.log(`Question: ${question}`);
@@ -18,11 +18,10 @@ const startGame = () => {
     }
 
     console.log('Correct!');
-    iterRound(limit - 1);
+    return iterRound(limit - 1);
   };
 
-  iterRound(roundsLimit);
-  return true;
+  return iterRound(roundsLimit);
 };
 
 export default () => {
