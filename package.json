@@ -1,6 +1,6 @@
 {
   "name": "econavi-project-brain-games",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "First JS project on Hexlet",
   "keywords": [
     "brain-games",
@@ -14,7 +14,8 @@
   },
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "files": [
     "dist"

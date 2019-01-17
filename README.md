@@ -9,3 +9,6 @@ My first JS-project on Hexlet.
 
 #### How to install and run The Even Game
 [![asciicast](https://asciinema.org/a/fSVANOCq9DKtYN7Rel5CC5bhD.svg)](https://asciinema.org/a/fSVANOCq9DKtYN7Rel5CC5bhD)
+
+#### How to install and run The Calc Game
+[![asciicast](https://asciinema.org/a/LAtmdjKCyByNmuc7RNdbOvbwz.svg)](https://asciinema.org/a/LAtmdjKCyByNmuc7RNdbOvbwz)
