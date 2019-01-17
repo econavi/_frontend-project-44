@@ -13,3 +13,12 @@ build: lint
 
 lint:
 	npx eslint .
+
+home:
+	dist/bin/brain-games.js
+
+calc:
+	dist/bin/brain-calc.js
+
+even:
+	dist/bin/brain-even.js
