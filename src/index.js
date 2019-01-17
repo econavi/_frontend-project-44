@@ -1,48 +1,40 @@
 import readlineSync from 'readline-sync';
-import evenGame from './games/even';
-import calcGame from './games/calc';
-import gcdGame from './games/gcd';
 
-export const roundsLimit = 3;
-export const isEven = num => num % 2 === 0;
-export const getNum = () => Math.floor(Math.random() * 100);
-export const requestAnswer = () => readlineSync.question('Your answer: ');
-export const showCorrectAnswer = (answer, correctAnswer) => console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-export const askName = () => readlineSync.question('May I have your name? ');
+const roundsLimit = 3;
 
-export const sayHello = () => {
+const askName = () => readlineSync.question('May I have your name? ');
+
+export const runGame = (game, rule) => {
   console.log('Welcome to the Brain Games!');
-  console.log(`Hello, ${askName()}!`);
-};
-
-const showRuls = (gameName) => {
-  if (gameName === 'even') console.log('Answer "yes" if number even otherwise answer "no".');
-  if (gameName === 'calc') console.log('What is the result of the expression?');
-  if (gameName === 'gcd') console.log('Find the greatest common divisor of given numbers.');
-  return false;
-};
-
-const startGame = (gameName) => {
-  if (gameName === 'even') return evenGame();
-  if (gameName === 'calc') return calcGame();
-  if (gameName === 'gcd') return gcdGame();
-  return false;
-};
-
-export default (gameName) => {
-  console.log('Welcome to the Brain Games!');
-
-  showRuls(gameName);
+  console.log(rule);
 
   const userName = askName();
   console.log(`Hello, ${userName}!`);
 
-  const userIsWinner = startGame(gameName);
+  const iterRound = (limit) => {
+    if (limit < 1) return true;
 
-  if (!userIsWinner) {
-    console.log(`Let's try again, ${userName}!`);
-    return;
-  }
+    const data = game();
 
+    if (data.userAnswer !== data.correctAnswer) {
+      console.log(data.question);
+      console.log(`Your answer: ${data.userAnswer}`);
+      console.log(`'${data.userAnswer}' is wrong answer ;(. Correct answer was '${data.correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
+      return false;
+    }
+
+    console.log('Correct!');
+
+    return iterRound(limit - 1);
+  };
+
+  const winner = iterRound(roundsLimit);
+  if (!winner) return;
   console.log(`Congratulations, ${userName}!`);
+};
+
+export default () => {
+  console.log('Welcome to the Brain Games!');
+  console.log(`Hello, ${askName()}!`);
 };

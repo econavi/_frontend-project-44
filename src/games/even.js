@@ -1,24 +1,26 @@
-import {
-  roundsLimit, isEven, getNum, requestAnswer, showCorrectAnswer,
-} from '..';
+import { runGame } from '..';
+import readlineSync from 'readline-sync';
+
+const isEven = num => num % 2 === 0;
+const getNum = () => Math.floor(Math.random() * 100);
+const requestAnswer = () => readlineSync.question('Your answer: ');
+const rule = 'Answer "yes" if number even otherwise answer "no".';
+
+const evenGame = () => {
+  const randomNumber = getNum();
+  const question = `Question: ${randomNumber}`;
+  const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
+
+  console.log(question);
+  const userAnswer = requestAnswer().toLowerCase();
+
+  return {
+    question,
+    userAnswer,
+    correctAnswer,
+  };
+};
 
 export default () => {
-  const iterRound = (limit) => {
-    if (limit < 1) return true;
-
-    const question = getNum();
-    console.log(`Question: ${question}`);
-    const answer = requestAnswer().toLowerCase();
-    const correctAnswer = isEven(question) ? 'yes' : 'no';
-
-    if (answer !== correctAnswer) {
-      showCorrectAnswer(answer, correctAnswer);
-      return false;
-    }
-
-    console.log('Correct!');
-    return iterRound(limit - 1);
-  };
-
-  return iterRound(roundsLimit);
+  runGame(evenGame, rule);
 };

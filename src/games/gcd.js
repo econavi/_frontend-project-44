@@ -1,35 +1,33 @@
-import {
-  roundsLimit, getNum, requestAnswer, showCorrectAnswer,
-} from '..';
+import { runGame } from '..';
+import readlineSync from 'readline-sync';
 
-export default () => {
-  const iterRound = (limit) => {
-    if (limit < 1) return true;
+const getNum = () => Math.floor(Math.random() * 100);
+const requestAnswer = () => readlineSync.question('Your answer: ');
 
-    const number1 = getNum();
-    const number2 = getNum();
+const rule = 'Find the greatest common divisor of given numbers.';
 
-    const gcd = (a, b) => {
-      if (b === 0) return Math.abs(a);
-      return gcd(b, a % b);
-    };
+const gcdGame = () => {
+  const number1 = getNum();
+  const number2 = getNum();
+  const question = `Question: ${number1}  ${number2}`;
 
-    const question = `Question: ${number1}  ${number2}`;
-    console.log(question);
-    const correctAnswer = gcd(number1, number2);
-
-    const answer = requestAnswer();
-
-    if (+answer !== correctAnswer) {
-      console.log(question);
-      console.log(`Your answer: ${answer}`);
-      showCorrectAnswer(answer, correctAnswer);
-      return false;
-    }
-
-    console.log('Correct!');
-    return iterRound(limit - 1);
+  const gcd = (a, b) => {
+    if (b === 0) return Math.abs(a);
+    return gcd(b, a % b);
   };
 
-  return iterRound(roundsLimit);
+  const correctAnswer = (gcd(number1, number2)).toString();
+
+  console.log(question);
+  const userAnswer = requestAnswer();
+
+  return {
+    question,
+    userAnswer,
+    correctAnswer,
+  };
+};
+
+export default () => {
+  runGame(gcdGame, rule);
 };
