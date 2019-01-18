@@ -1,5 +1,5 @@
-import { getRandomNum } from '../utils';
-import { runGame } from '..';
+import getRandomNum from '../utils';
+import runGame from '..';
 
 const rule = 'What is the result of the expression?';
 
@@ -27,10 +27,7 @@ const calcGame = () => {
       break;
   }
 
-  return {
-    question,
-    correctAnswer,
-  };
+  return { question, correctAnswer };
 };
 
 export default () => {
