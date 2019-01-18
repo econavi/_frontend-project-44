@@ -18,3 +18,6 @@ My first JS-project on Hexlet.
 
 #### How to install and run The Progression Game
 [![asciicast](https://asciinema.org/a/mTwtnYXox7YtY83c3txFdLWcD.svg)](https://asciinema.org/a/mTwtnYXox7YtY83c3txFdLWcD)
+
+#### How to install and run The Prime Game
+[![asciicast](https://asciinema.org/a/pWuagjXFoVMHLCS9QHcETQvuV.svg)](https://asciinema.org/a/pWuagjXFoVMHLCS9QHcETQvuV)

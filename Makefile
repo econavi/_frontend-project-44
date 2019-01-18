@@ -32,3 +32,6 @@ gcd:
 
 progression:
 	dist/bin/brain-progression.js
+
+prime:
+	dist/bin/brain-prime.js
