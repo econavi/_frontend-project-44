@@ -7,6 +7,10 @@ start:
 publish:
 	npm publish
 
+prebuild:
+	rm -rf dist
+	npm run build
+
 build: lint
 	rm -rf dist
 	npm run build
@@ -25,3 +29,6 @@ even:
 
 gcd:
 	dist/bin/brain-gcd.js
+
+progression:
+	dist/bin/brain-progression.js
