@@ -30,8 +30,8 @@ const runGame = (game, rule) => {
     return iterRound(limit - 1);
   };
 
-  const winner = iterRound(roundsLimit);
-  if (!winner) {
+  const isWin = iterRound(roundsLimit);
+  if (!isWin) {
     console.log(`Let's try again, ${userName}!`);
     return;
   }

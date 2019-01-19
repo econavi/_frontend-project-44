@@ -19,11 +19,9 @@ const calcGame = () => {
       question = `${operand1} - ${operand2}`;
       correctAnswer += (operand1 - operand2);
       break;
-    case 3:
+    default:
       question = `${operand1} * ${operand2}`;
       correctAnswer += (operand1 * operand2);
-      break;
-    default:
       break;
   }
 
