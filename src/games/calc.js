@@ -11,18 +11,18 @@ const calcGame = () => {
   let correctAnswer = '';
 
   switch (operator) {
-  case 1:
-    question = `${operand1} + ${operand2}`;
-    correctAnswer += (operand1 + operand2);
-    break;
-  case 2:
-    question = `${operand1} - ${operand2}`;
-    correctAnswer += (operand1 - operand2);
-    break;
-  default:
-    question = `${operand1} * ${operand2}`;
-    correctAnswer += (operand1 * operand2);
-    break;
+    case 1:
+      question = `${operand1} + ${operand2}`;
+      correctAnswer += (operand1 + operand2);
+      break;
+    case 2:
+      question = `${operand1} - ${operand2}`;
+      correctAnswer += (operand1 - operand2);
+      break;
+    default:
+      question = `${operand1} * ${operand2}`;
+      correctAnswer += (operand1 * operand2);
+      break;
   }
 
   return { question, correctAnswer };
