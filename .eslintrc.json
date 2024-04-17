@@ -1,0 +1,13 @@
+{
+  "env": {
+    "node": true
+  },
+  "parser": "@babel/eslint-parser",
+  "plugins": [
+    "babel",
+    "@stylistic/js"
+  ],
+  "rules": {
+    "@stylistic/js/indent": ["error", 2]
+  }
+}

@@ -1,5 +1,5 @@
-import getRandomNum from '../utils';
-import runGame from '..';
+import { getRandomNum } from '../utils.js';
+import runGame from '../index.js';
 
 const gcd = (a, b) => {
   if (b === 0) return Math.abs(a);

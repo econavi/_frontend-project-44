@@ -2,14 +2,10 @@ install:
 	npm install
 
 start:
-	npx babel-node -- src/bin/brain-games.js
+	npx babel-node -- bin/brain-games.js
 
 publish:
 	npm publish
-
-prebuild:
-	rm -rf dist
-	npm run build
 
 build: lint
 	rm -rf dist
@@ -18,20 +14,20 @@ build: lint
 lint:
 	npx eslint .
 
-home:
-	dist/bin/brain-games.js
+brain-games:
+	node bin/brain-games.js
 
 calc:
-	dist/bin/brain-calc.js
+	node bin/brain-calc.js
 
 even:
-	dist/bin/brain-even.js
+	node bin/brain-even.js
 
 gcd:
-	dist/bin/brain-gcd.js
+	node bin/brain-gcd.js
 
 progression:
-	dist/bin/brain-progression.js
+	node bin/brain-progression.js
 
 prime:
-	dist/bin/brain-prime.js
+	node bin/brain-prime.js
