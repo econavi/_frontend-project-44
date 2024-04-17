@@ -2,7 +2,7 @@ import { getRandomNum } from '../utils.js';
 import runGame from '../index.js';
 
 export const isEven = num => num % 2 === 0;
-const rule = 'Answer "yes" if number even otherwise answer "no".';
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const evenGame = () => {
   const randomNumber = getRandomNum(0, 101);
