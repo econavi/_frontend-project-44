@@ -3,17 +3,22 @@
 # Brain-games
 My first JS-project on Hexlet.
 
-#### How to install and run The Even Game
+#### Install
+```
+npm install econavi-project-brain-games
+```
+
+#### How to run The Even Game
 [![asciicast](https://asciinema.org/a/fSVANOCq9DKtYN7Rel5CC5bhD.svg)](https://asciinema.org/a/fSVANOCq9DKtYN7Rel5CC5bhD)
 
-#### How to install and run The Calc Game
+#### How to run The Calc Game
 [![asciicast](https://asciinema.org/a/LAtmdjKCyByNmuc7RNdbOvbwz.svg)](https://asciinema.org/a/LAtmdjKCyByNmuc7RNdbOvbwz)
 
-#### How to install and run The GCD Game
+#### How to run The GCD Game
 [![asciicast](https://asciinema.org/a/HXCMZcMypCMc5iVXb4xK8eFci.svg)](https://asciinema.org/a/HXCMZcMypCMc5iVXb4xK8eFci)
 
-#### How to install and run The Progression Game
+#### How to run The Progression Game
 [![asciicast](https://asciinema.org/a/mTwtnYXox7YtY83c3txFdLWcD.svg)](https://asciinema.org/a/mTwtnYXox7YtY83c3txFdLWcD)
 
-#### How to install and run The Prime Game
+#### How to run The Prime Game
 [![asciicast](https://asciinema.org/a/pWuagjXFoVMHLCS9QHcETQvuV.svg)](https://asciinema.org/a/pWuagjXFoVMHLCS9QHcETQvuV)
